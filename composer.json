@@ -1,0 +1,15 @@
+{
+  "name": "phprad/fish-captcha",
+  "version": "0.0.1",
+  "description": "Fish Captcha for Yii2 framework",
+  "keywords": ["captcha"],
+  "homepage": "https://github.com/igribov/yii2-fish-captcha",
+  "type": "yii2-extension",
+  "license": "BSD 3-Clause",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "phprad\\fishcaptcha\\": "src"
+    }
+  }
+}
