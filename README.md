@@ -1,3 +1,23 @@
+**How to install Fish Captcha**
+Add git repository into you composer.json file and set "minimum-stability" : "dev".
+
+```php
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/igribov/fish-captcha.git"
+    }
+]
+```
+run in cmd line
+```php
+composer require phprad/fish-captcha
+```
+
 **How to use Fish Captcha**
 
 Add fish-captcha stand-alone actions into your project controller
