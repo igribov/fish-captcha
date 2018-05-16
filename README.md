@@ -1,4 +1,9 @@
+**What is Fish Captcha ?**
+
+![alt text](./preview.png?raw=true)
+
 **How to install Fish Captcha**
+
 Add git repository into you composer.json file and set "minimum-stability" : "dev".
 
 ```php
@@ -46,7 +51,7 @@ public function rules()
 }
 ```
 
-You can use fish captcha widget in your views. Use correct controller name (step 1).
+You can use fish captcha widget in your views. Use correct controller name equals controller with fish-captcha action (step 1).
 
 ```php
 
@@ -57,5 +62,3 @@ You can use fish captcha widget in your views. Use correct controller name (step
 ]) ?>
 
 ```
-
-![alt text](./preview.png?raw=true)
