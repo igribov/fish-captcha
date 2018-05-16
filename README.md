@@ -57,3 +57,5 @@ You can use fish captcha widget in your views. Use correct controller name (step
 ]) ?>
 
 ```
+
+![alt text](./preview.png?raw=true)
