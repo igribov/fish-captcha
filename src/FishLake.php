@@ -3,10 +3,10 @@
 namespace phprad\fishcaptcha;
 
 /**
- * Class FishRepository
+ * Class FishLake
  * @package phprad\fishcaptcha
  */
-class FishRepository
+class FishLake
 {
     /** fishes */
     const FISHES = [

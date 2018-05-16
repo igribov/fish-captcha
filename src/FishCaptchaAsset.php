@@ -1,6 +1,7 @@
 <?php
 
 namespace phprad\fishcaptcha;
+
 use yii\web\AssetBundle;
 
 class FishCaptchaAsset extends AssetBundle

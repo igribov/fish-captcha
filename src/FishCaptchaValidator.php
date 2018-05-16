@@ -22,7 +22,6 @@ class FishCaptchaValidator extends Validator
      */
     public $captchaAction = 'site/fish-captcha';
 
-
     /**
      * {@inheritdoc}
      */
@@ -42,7 +41,7 @@ class FishCaptchaValidator extends Validator
         ValidationAsset::register($view);
         $options = $this->getClientOptions($model, $attribute);
         $message = $options['message'];
-        $fishes = json_encode(array_keys(FishRepository::FISHES), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        $fishes = json_encode(array_keys(FishLake::FISHES), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
         return "if ($.inArray(value, $fishes) === -1) { messages.push('$message'); }";
     }
@@ -67,10 +66,12 @@ class FishCaptchaValidator extends Validator
     public function createCaptchaAction()
     {
         $ca = Yii::$app->createController($this->captchaAction);
+
         if ($ca !== false) {
             /* @var $controller \yii\base\Controller */
             list($controller, $actionID) = $ca;
             $action = $controller->createAction($actionID);
+
             if ($action !== null) {
                 return $action;
             }

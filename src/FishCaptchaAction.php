@@ -110,7 +110,7 @@ class FishCaptchaAction extends Action
     public function validate($input, $caseSensitive)
     {
         $code = $this->getVerifyCode();
-        $input = FishRepository::getCodeByFishName($input);
+        $input = FishLake::getCodeByFishName($input);
         $valid = $caseSensitive ? ($input === $code) : strcasecmp($input, $code) === 0;
 
         $session = Yii::$app->getSession();
@@ -129,7 +129,7 @@ class FishCaptchaAction extends Action
      */
     protected function generateFishCode()
     {
-        return FishRepository::getRandomFishCode();
+        return FishLake::getRandomFishCode();
     }
 
     /**
@@ -147,7 +147,7 @@ class FishCaptchaAction extends Action
      */
     protected function renderImage($code)
     {
-        $fileName = FishRepository::getFileNameByFishCode($code);
+        $fileName = FishLake::getFileNameByFishCode($code);
         $filePath = __DIR__ . '/frontend/dist/img/' . $fileName;
 
         if (is_file($filePath)) {

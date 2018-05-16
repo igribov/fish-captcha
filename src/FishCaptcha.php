@@ -12,25 +12,19 @@ use yii\widgets\InputWidget;
 class FishCaptcha extends InputWidget
 {
     /**
-     * @var string|array the route of the action that generates the CAPTCHA images.
-     * The action represented by this route must be an action of [[CaptchaAction]].
-     * Please refer to [[\yii\helpers\Url::toRoute()]] for acceptable formats.
+     * @var string
      */
     public $captchaAction = 'site/fish-captcha';
     /**
-     * @var array HTML attributes to be applied to the CAPTCHA image tag.
-     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @var array
      */
     public $imageOptions = [];
     /**
-     * @var string the template for arranging the CAPTCHA image tag and the text input tag.
-     * In this template, the token `{image}` will be replaced with the actual image tag,
-     * while `{input}` will be replaced with the text input tag.
+     * @var string
      */
     public $template = '<div id="{id}"></div>{input}';
     /**
-     * @var array the HTML attributes for the input tag.
-     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @var array
      */
     public $options = ['class' => 'form-control'];
 
@@ -81,8 +75,7 @@ class FishCaptcha extends InputWidget
     }
 
     /**
-     * Returns the options for the captcha JS widget.
-     * @return array the options
+     * @return array
      */
     protected function getClientOptions()
     {
