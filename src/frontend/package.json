@@ -7,9 +7,7 @@
   "scripts": {
     "dev": "NODE_ENV=dev node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.config.js",
     "build": "NODE_ENV=production node ./node_modules/webpack/bin/webpack --config webpack.prod.config.js",
-    "watch": "NODE_ENV=production node ./node_modules/webpack/bin/webpack --config webpack.prod.config.js --watch",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "watch": "NODE_ENV=production node ./node_modules/webpack/bin/webpack --config webpack.prod.config.js --watch"
   },
   "author": "",
   "license": "ISC",

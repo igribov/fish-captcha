@@ -62,3 +62,28 @@ You can use fish captcha widget in your views. Use correct controller name equal
 ]) ?>
 
 ```
+
+**How rebuild frontend**
+
+install dependencies
+
+``` cd ./frontend ```
+``` npm i ```
+
+rebuild frontend
+
+``` npm run build ```
+
+If you want to dev and debug fish captcha with yii2 :
+
+- set `assetManager['forceCopy']` to `true` in config;
+```
+'assetManager' => [
+    'forceCopy' => true
+]
+```
+- run this command
+
+``` npm run watch ```
+
+Every changes in frontend/src will call rebuild process.
